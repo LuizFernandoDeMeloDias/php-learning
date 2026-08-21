@@ -1,0 +1,17 @@
+{
+    "name": "adm-sys/php-learning",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luiz Dias",
+            "email": "63132216+LuizFernandoDeMeloDias@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\":"src/"
+        }
+    }
+}
