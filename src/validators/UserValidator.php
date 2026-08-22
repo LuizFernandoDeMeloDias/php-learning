@@ -1,8 +1,10 @@
 <?php 
 namespace App\Validators;
+
+use App\Interfaces\ValidatorInterface;
 use App\Models\User;
 
-class UserValidator{
+class UserValidator implements ValidatorInterface{
     public function isValid(User $user): bool{
         $userAge = $user->getAge();
         $userName = $user->getName();
@@ -11,7 +13,6 @@ class UserValidator{
             return false;
         }
         if(
-            !is_numeric($userAge) or
             $userAge >= 120 or
             floor($userAge) != $userAge or
             $userAge < 18
